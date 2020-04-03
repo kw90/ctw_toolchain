@@ -1,0 +1,16 @@
+k = 6;
+b = 3;
+AtomicConstraints =  [|
+6, 1|
+	6, 2|
+	6, 3|
+	5, 2|
+	5, 3|
+	4, 3|];
+DisjunctiveConstraints =  [||];
+SoftAtomicConstraints =  [|
+1, 2|
+2, 3|
+5, 4|
+6, 5|];
+DirectSuccessors =  [];

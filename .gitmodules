@@ -1,0 +1,3 @@
+[submodule "fzn2omt"]
+	path = fzn2omt
+	url = git@github.com:PatrickTrentin88/fzn2omt.git
