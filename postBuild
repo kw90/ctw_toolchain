@@ -15,6 +15,7 @@ cd minizinc/share/minizinc/
 wget http://optimathsat.disi.unitn.it/data/smt2.tar.gz
 tar xf smt2.tar.gz
 rm smt2.tar.gz
+cd ~
 
 # Install Z3
 git clone https://github.com/Z3Prover/z3
