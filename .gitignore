@@ -30,11 +30,11 @@ coverage.xml
 cover/
 
 # Translated Files
-./dzn-files/*
-./smt2-files/*
-./fzn-files/*
+dzn-files/
+smt2-files/
+fzn-files/
 
 # Add example files
-!./dzn-files/A001.dzn
-!./fzn-files/A001-dzn.fzn
-!./smt2-files/A001-dzn-fzn.smt2
+!dzn-files/A001.dzn
+!fzn-files/A001-dzn.fzn
+!smt2-files/A001-dzn-fzn.smt2
