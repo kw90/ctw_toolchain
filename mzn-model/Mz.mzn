@@ -75,7 +75,7 @@ var int: obj = S * pow(k, 3) +
                N;
 
 
-solve ::int_search(vio_abs++vio++pfc, first_fail, indomain_min, complete)
+solve %::int_search(vio_abs++vio++pfc, first_fail, indomain_min, complete)
 
 minimize obj;
 

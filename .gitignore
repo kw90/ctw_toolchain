@@ -1,0 +1,40 @@
+# IPython
+profile_default/
+ipython_config.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translated Files
+./dzn-files/*
+./smt2-files/*
+./fzn-files/*
+
+# Add example files
+!./dzn-files/A001.dzn
+!./fzn-files/A001-dzn.fzn
+!./smt2-files/A001-dzn-fzn.smt2

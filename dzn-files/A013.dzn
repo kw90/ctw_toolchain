@@ -1,9 +1,0 @@
-k = 4;
-b = 2;
-AtomicConstraints =  [||];
-DisjunctiveConstraints =  [||];
-SoftAtomicConstraints =  [|
-1, 2|
-3, 4|];
-DirectSuccessors =  [1,
-2];

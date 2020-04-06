@@ -5,7 +5,7 @@ set -e
 # Install OptiMathSat
 wget http://optimathsat.disi.unitn.it/releases/optimathsat-1.6.4/optimathsat-1.6.4-linux-64-bit.tar.gz
 tar xzf optimathsat-1.6.4-linux-64-bit.tar.gz
-mv optimathsat-1.6.4-linux-64-bit optimathsat
+mv optimathsat-1.6.4-linux-64-bit /home/${NB_USER}/optimathsat
 
 # Install MiniZinc
 wget https://github.com/MiniZinc/MiniZincIDE/releases/download/2.4.3/MiniZincIDE-2.4.3-bundle-linux-x86_64.tgz
@@ -15,7 +15,7 @@ cd minizinc/share/minizinc/
 wget http://optimathsat.disi.unitn.it/data/smt2.tar.gz
 tar xf smt2.tar.gz
 rm smt2.tar.gz
-cd ~
+cd /home/${NB_USER}
 
 # Install Z3
 git clone https://github.com/Z3Prover/z3
