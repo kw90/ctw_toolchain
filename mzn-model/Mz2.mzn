@@ -22,12 +22,12 @@ forall (i in index_set_1of2(AtomicConstraints))
   (pfc[AtomicConstraints[i,1]] < pfc[AtomicConstraints[i,2]]);
 
 % disjunctive constraints
-array[int] of var bool: disj = 
+array[int] of var bool: disj =
   [pfc[DisjunctiveConstraints[i, 2*j+1]] < pfc[DisjunctiveConstraints[i,2*j+2]]
       | i in index_set_1of2(DisjunctiveConstraints), j in 0..1
   ];
 constraint forall (i in 1..length(disj) div 2) (disj[(i-1)*2+1] \/ disj[(i-1)*2+2]);
-  
+
 % direct successor constraints
 constraint
 forall (i in index_set(DirectSuccessors))
@@ -41,14 +41,13 @@ forall (i in index_set(DirectSuccessors))
 % Criterium S
 array[int] of var bool: vio_abs =
   [pfc[i] - pfc[i+b] > 1 \/ pfc[i+b] - pfc[i] > 1 | i in CableStarts];
-   
-var int: S = 
+
+var int: S =
   if b=0 then 0
   else sum(vio_abs)
   endif;
-  
-    
-var int: M = 
+
+var int: M =
   if b=0 then 0
   else (max(i in CavityPairs) (
         sum(j in CavityPairs where j <= b)
@@ -56,22 +55,26 @@ var int: M =
           + sum(j in CavityPairs where j > b)
             (pfc[j] < pfc[i] /\ pfc[i] < pfc[j-b])))
   endif;
-  
-var int: L = 
+
+% Criterium L
+% var int: max_positive = max(i in CableStarts) (pfc[i]);
+% var int: max_negative = max(i in CableStarts) (-pfc[i+b]);
+
+var int: L =
   if b=0 then 0
-  else max(i in CableStarts) ((abs(pfc[i] - pfc[i+b])) - 1)
+  else 0
   endif;
- 
- % Criterium N
- array[int] of var bool: vio =
-   [pfc[SoftAtomicConstraints[i,1]] >= pfc[SoftAtomicConstraints[i,2]]
-     | i in index_set_1of2(SoftAtomicConstraints)];
-     
+
+% Criterium N
+array[int] of var bool: vio =
+  [pfc[SoftAtomicConstraints[i,1]] >= pfc[SoftAtomicConstraints[i,2]]
+    | i in index_set_1of2(SoftAtomicConstraints)];
+
 var int: N = sum(vio);
 
-var int: obj = S * pow(k, 3) + 
-               M * pow(k, 2) + 
-               L * pow(k, 1) + 
+var int: obj = S * pow(k, 3) +
+               M * pow(k, 2) +
+               L * pow(k, 1) +
                N;
 
 
