@@ -8,9 +8,9 @@ tar xzf optimathsat-1.6.4-linux-64-bit.tar.gz
 mv optimathsat-1.6.4-linux-64-bit /home/${NB_USER}/optimathsat
 
 # Install MiniZinc
-wget https://github.com/MiniZinc/libminizinc/archive/2.1.7.tar.gz
-tar xf 2.1.7.tar.gz
-mv libminizinc-2.1.7 minizinc
+wget https://github.com/MiniZinc/libminizinc/archive/2.3.2.tar.gz
+tar xf 2.3.2.tar.gz
+mv libminizinc-2.3.2 minizinc
 cd minizinc && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .

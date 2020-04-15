@@ -1,13 +1,10 @@
 output [""++format([S,M,L,N])++"\n"++format(obj)++"\n"++format(pfc)++"\n"];
-set of int: Cavities = 1..24;
-int: b = 12;
-set of int: CableStarts = 1..12;
-array [1..20,1..2] of int: SoftAtomicConstraints = [|11,1|1,2|3,4|4,5|6,7|8,9|9,10|10,12|24,13|12,14|14,15|22,16|7,17|5,18|21,19|13,20|18,21|17,22|16,23|2,24|];
+set of int: Cavities = 1..4;
+int: b = 2;
+set of int: CableStarts = 1..2;
 array [Cavities] of int: pfc;
-array [int] of bool: vio_abs = [pfc[i]-pfc[i+b] > 1 \/ pfc[i+b]-pfc[i] > 1 | i in CableStarts, ];
-int: S = if b==0 then 0 else sum(vio_abs) endif;
+int: S;
 int: M;
 int: L = if b==0 then 0 else max([abs(pfc[i]-pfc[i+b])-1 | i in CableStarts, ]) endif;
-array [int] of bool: vio = [pfc[SoftAtomicConstraints[i,1]]>=pfc[SoftAtomicConstraints[i,2]] | i in index_set_1of2(SoftAtomicConstraints), ];
-int: N = sum(vio);
+int: N;
 int: obj;
