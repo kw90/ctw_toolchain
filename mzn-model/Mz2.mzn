@@ -1,6 +1,6 @@
 include "globals.mzn";
 
-int: k;  % number of cavities = length of the permutation
+int: k :: output_var;  % number of cavities = length of the permutation
 set of int: Positions = 1..k;
 set of int: Cavities = Positions;
 
@@ -57,12 +57,11 @@ var int: M =
   endif;
 
 % Criterium L
-% var int: max_positive = max(i in CableStarts) (pfc[i]);
-% var int: max_negative = max(i in CableStarts) (-pfc[i+b]);
-
-var int: L =
+var int: diff1 = max(i in CableStarts)(pfc[i] - pfc[i+b]);
+var int: diff2 = max(i in CableStarts)(pfc[i+b] - pfc[i]);
+var int: L :: output_var=
   if b=0 then 0
-  else 0
+  else (max(diff1, diff2) - 1)
   endif;
 
 % Criterium N
@@ -82,4 +81,5 @@ solve %::int_search(vio_abs++vio++pfc, first_fail, indomain_min, complete)
 
 minimize obj;
 
-output ["\([S,M,L,N])\n\(obj)\n\(pfc)\n"];
+output ["\(k)\n\([S,M,L,N])\n\(obj)\n\(pfc)\n"];
+

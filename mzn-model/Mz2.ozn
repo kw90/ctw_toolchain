@@ -1,8 +1,13 @@
-output [""++format([S,M,L,N])++"\n"++format(obj)++"\n"++format(pfc)++"\n"];
+output [""++format(k)++"\n"++format([S,M,L,N])++"\n"++format(obj)++"\n"++format(pfc)++"\n"];
+int: k = 4;
 set of int: Cavities = 1..4;
+int: b = 2;
+set of int: CableStarts = 1..2;
 array [Cavities] of int: pfc;
 int: S;
 int: M;
-int: L = 0;
+int: diff1 = max([pfc[i]-pfc[i+b] | i in CableStarts, ]);
+int: diff2 = max([pfc[i+b]-pfc[i] | i in CableStarts, ]);
+int: L = if b==0 then 0 else max(diff1,diff2)-1 endif;
 int: N;
 int: obj;
