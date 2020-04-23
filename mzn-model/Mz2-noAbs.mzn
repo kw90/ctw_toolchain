@@ -57,9 +57,18 @@ var int: M =
             (pfc[j] < pfc[i] /\ pfc[i] < pfc[j-b])))
   endif;
   
+% Criterium L
+var int: diff1 = 
+  if b=0 then 0
+  else (max(i in CableStarts)(pfc[i] - pfc[i+b]))
+  endif;
+var int: diff2 = 
+  if b=0 then 0
+  else (max(i in CableStarts)(pfc[i+b] - pfc[i]))
+  endif;
 var int: L =
   if b=0 then 0
-  else max(i in CableStarts) (abs(pfc[i] - pfc[i + b]) - 1)
+  else (max(diff1, diff2) - 1)
   endif;
  
  % Criterium N
