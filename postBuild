@@ -26,6 +26,12 @@ git clone https://github.com/Z3Prover/z3
 # python scripts/mk_make.py
 # cd build
 # make
+cd /home/${NB_USER}
+
+# Install (FlatZinc) OR-Tools
+wget https://github.com/google/or-tools/releases/download/v7.6/or-tools_flatzinc_ubuntu-18.04_v7.6.7691.tar.gz
+tar xzf or-tools_flatzinc_ubuntu-18.04_v7.6.7691.tar.gz
+mv or-tools_flatzinc_Ubuntu-18.04-64bit_v7.6.7691 or-tools
 
 # Clone fzn2omt
 git clone https://github.com/PatrickTrentin88/fzn2omt.git

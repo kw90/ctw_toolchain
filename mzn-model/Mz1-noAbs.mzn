@@ -32,7 +32,15 @@ constraint forall (i in index_set(DirectSuccessors)) (
   endif
 );
 
-var int: S = if b=0 then 0 else sum(i in CableStarts) (abs(pfc[i]-pfc[i+b]) > 1) endif;
+% Criterium S
+array[int] of var bool: vio_abs =
+  [pfc[i] - pfc[i+b] > 1 \/ pfc[i+b] - pfc[i] > 1 | i in CableStarts];
+   
+var int: S = 
+  if b=0 then 0
+  else sum(vio_abs)
+  endif;
+
 var int: M = if b=0 then 0 else
 	(max(i in ChamberPairs) 
 		(sum(j in ChamberPairs where j<=b) (pfc[j] < pfc[i] /\ pfc[i] < pfc[j+b])
