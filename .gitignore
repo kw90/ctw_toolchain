@@ -38,9 +38,13 @@ fzn-files/
 !dzn-files/A001.dzn
 !fzn-files/or-tools/Mz1-noAbs/A001-dzn.fzn
 !fzn-files/or-tools/Mz2-noAbs/A001-dzn.fzn
-!fzn-files/z3/Mz1-noAbs/A001-dzn.fzn
-!fzn-files/z3/Mz2-noAbs/A001-dzn.fzn
+!fzn-files/smt2/Mz1-noAbs/A001-dzn.fzn
+!fzn-files/smt2/Mz2-noAbs/A001-dzn.fzn
 !smt2-files/z3/Mz1-noAbs/A001-dzn-fzn.smt2
 !smt2-files/z3/Mz1-noAbs/v3/A001-dzn-fzn_v3.smt2
 !smt2-files/z3/Mz2-noAbs/A001-dzn-fzn.smt2
 !smt2-files/z3/Mz2-noAbs/v3/A001-dzn-fzn_v3.smt2
+!smt2-files/optimathsat/Mz1-noAbs/A001-dzn-fzn.smt2
+!smt2-files/optimathsat/Mz1-noAbs/v3/A001-dzn-fzn_v3.smt2
+!smt2-files/optimathsat/Mz2-noAbs/A001-dzn-fzn.smt2
+!smt2-files/optimathsat/Mz2-noAbs/v3/A001-dzn-fzn_v3.smt2
