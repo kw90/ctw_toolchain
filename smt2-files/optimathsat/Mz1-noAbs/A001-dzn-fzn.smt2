@@ -1,5 +1,5 @@
 ;; MathSAT API call trace
-;; generated on Tue May 12 08:35:41 2020
+;; generated on Tue Jun  2 12:45:18 2020
 ;;
 ;; fzn-optimathsat configuration:
 ;;    --int-enc=True
