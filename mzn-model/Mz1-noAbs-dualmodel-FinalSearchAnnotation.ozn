@@ -1,0 +1,13 @@
+output [""++format([S,M,L,N])++"\n"++format(obj)++"\n"++format(pfc)++"\n"];
+set of int: Cavities = 1..80;
+int: b = 40;
+set of int: CableStarts = 1..40;
+array [1..74,1..2] of int: SoftAtomicConstraints = [|40,2|2,3|3,4|4,5|5,6|6,7|7,8|8,9|9,10|10,11|1,12|11,13|14,15|12,16|15,17|17,18|18,19|19,20|20,21|21,22|22,23|23,24|24,25|25,26|16,27|26,28|28,29|29,30|30,31|31,32|32,33|33,34|34,35|27,36|36,37|37,38|38,39|39,40|52,41|60,42|44,43|45,44|46,45|47,46|65,47|49,48|50,49|51,50|53,51|56,52|71,53|55,54|57,55|67,56|58,57|59,58|61,60|62,61|63,62|64,63|66,65|68,66|76,67|69,68|70,69|72,71|73,72|74,73|75,74|54,76|78,77|79,78|80,79|42,80|];
+array [Cavities] of int: pfc;
+int: S;
+int: M;
+int: diff1 = if b==0 then 0 else max([pfc[i]-pfc[i+b] | i in CableStarts, ]) endif;
+int: diff2 = if b==0 then 0 else max([pfc[i+b]-pfc[i] | i in CableStarts, ]) endif;
+int: L = if b==0 then 0 else max(diff1,diff2)-1 endif;
+int: N = sum([bool2int(pfc[SoftAtomicConstraints[i,1]] > pfc[SoftAtomicConstraints[i,2]]) | i in index_set_1of2(SoftAtomicConstraints), ]);
+int: obj;
