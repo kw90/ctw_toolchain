@@ -14,7 +14,7 @@ jupyter-repo2docker --volume $(pwd):/home/$USER/work .
 ```
 
 That's it! This will install all required packages and launch a Jupyter notebook
-server that be accessed by any browser at
+server that can be accessed by any browser at
 [http://localhost:8888](http://localhost:8888) and using the `TOKEN` printed at
 the end of the build process.
 
@@ -39,6 +39,10 @@ The following dependencies are required:
 ## Run the Translation Pipelines
 
 To run any pipeline with a local volume attached, move to the `work` directory. With this it is possible to copy the files into the `dzn`, `fzn` and `mzn` folders that get used by the conversion scripts.
+
+### Translating `dat` to `dzn`
+
+TBD.
 
 ### Translating `dzn` with `mzn` to flattened `fzn` for OR-Tools
 
