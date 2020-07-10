@@ -1,0 +1,21 @@
+k = 10;
+b = 5;
+AtomicConstraints =  [|
+2, 4|
+	3, 4|
+	3, 5|
+	9, 7|
+	9, 8|
+	10, 7|
+	10, 8|
+	6, 8|];
+DisjunctiveConstraints =  [|2, 1, 2, 3|
+	10, 9, 10, 6|];
+SoftAtomicConstraints =  [|
+1, 2|
+2, 3|
+4, 5|
+10, 6|
+7, 8|
+9, 10|];
+DirectSuccessors =  [];

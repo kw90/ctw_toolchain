@@ -20,7 +20,9 @@ the end of the build process.
 
 ### Build it Yourself
 
-In case you would not like to use `repo2docker` you can install the required dependencies following the `postBuild` file containing installation instructions for Linux.
+In case you would not like to use `repo2docker` you can install the required
+dependencies following the `postBuild` file containing installation instructions
+for Linux.
 
 #### Dependencies
 
@@ -38,7 +40,9 @@ The following dependencies are required:
 
 ## Run the Translation Pipelines
 
-To run any pipeline with a local volume attached, move to the `work` directory. With this it is possible to copy the files into the `dzn`, `fzn` and `mzn` folders that get used by the conversion scripts.
+To run any pipeline with a local volume attached, move to the `work` directory.
+With this it is possible to copy the files into the `dzn`, `fzn` and `mzn`
+folders that get used by the conversion scripts.
 
 ### Translating `dat` to `dzn`
 
@@ -46,12 +50,29 @@ TBD.
 
 ### Translating `dzn` with `mzn` to flattened `fzn` for OR-Tools
 
-The notebooks `TranslateDZN2FZN.ipynb` and `TranslateDZN2FZN-NewDualModels.ipynb` provide the necessary scripts to translate `dzn` data and `mzn` models to `fzn` files suitable for `OR-Tools`. The two notebooks only differ in the `mzn` models used.
+The notebooks `TranslateDZN2FZN.ipynb` and
+`TranslateDZN2FZN-NewDualModels.ipynb` provide the necessary scripts to
+translate `dzn` data and `mzn` models to `fzn` files suitable for `OR-Tools`.
+The two notebooks only differ in the `mzn` models used.
 
 ### Translating `dzn` with `mzn` to `smt2` for z3
 
-The notebook `TranslateDZN2SMT2_Z3.ipynb` provides all scripts necessary to translate `dzn` data and `mzn` models to `smt2` files suitable for `z3`. It uses the `smt2` support library for global constraints in the process of generating intermediary `fzn` files. The generated `smt2` files from are then further processed. First, the script adds lower and upper bounds for the decision variable `pfc`. Second, the amount of cavities `k` is added as a workaround to the files for easier solution extraction.
+The notebook `TranslateDZN2SMT2_Z3.ipynb` provides all scripts necessary to
+translate `dzn` data and `mzn` models to `smt2` files suitable for `z3`. It uses
+the `smt2` support library for global constraints in the process of generating
+intermediary `fzn` files. The generated `smt2` files from are then further
+processed. First, the script adds lower and upper bounds for the decision
+variable `pfc`. Second, the amount of cavities `k` is added as a workaround to
+the files for easier solution extraction.
 
 ### Translating `dzn` with `mzn` to `smt2` for OptiMathSAT
 
-The notebook `TranslateDZN2SMT2_OptiMathSAT.ipynb` provides all scripts necessary to translate `dzn` data and `mzn` models to `smt2` files suitable for `OptiMathSAT`. It uses the `smt2` support library for global constraints in the process of generating intermediary `fzn` files. The generated `smt2` files from are then further processed, similar to the `z3` script. The first two steps are identical, but one more 3rd step is added, which removes the final optimization and output lines. The optimization and output is handled by the Python Wrapper found on [this GitHub repository](https://github.com/kw90/omt_python_timeout_wrapper).
+The notebook `TranslateDZN2SMT2_OptiMathSAT.ipynb` provides all scripts
+necessary to translate `dzn` data and `mzn` models to `smt2` files suitable for
+`OptiMathSAT`. It uses the `smt2` support library for global constraints in the
+process of generating intermediary `fzn` files. The generated `smt2` files from
+are then further processed, similar to the `z3` script. The first two steps are
+identical, but one more 3rd step is added, which removes the final optimization
+and output lines. The optimization and output is handled by the Python Wrapper
+found on [this GitHub
+repository](https://github.com/kw90/omt_python_timeout_wrapper).

@@ -22,10 +22,10 @@ cd /home/${NB_USER}
 
 # Install Z3
 git clone https://github.com/Z3Prover/z3
-# cd z3
-# python scripts/mk_make.py
-# cd build
-# make
+cd z3
+python scripts/mk_make.py
+cd build
+make
 cd /home/${NB_USER}
 
 # Install (FlatZinc) OR-Tools
