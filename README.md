@@ -18,11 +18,14 @@ server that can be accessed by any browser at
 [http://localhost:8888](http://localhost:8888) and using the `TOKEN` printed at
 the end of the build process.
 
+Or use Binder
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kw90/ctw_translation_toolchain/master)
+
 ### Build it Yourself
 
-In case you would not like to use `repo2docker` you can install the required
-dependencies following the `postBuild` file containing installation instructions
-for Linux.
+In case you would not like to use `repo2docker` or Binder you can install the
+required dependencies following the `postBuild` file containing installation
+instructions for Linux.
 
 #### Dependencies
 
