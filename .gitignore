@@ -1,5 +1,3 @@
-.DS_Store
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -145,6 +143,8 @@ data/smt2/
 
 # But add one example file each
 !data/fzn/or-tools/Mz1-noAbs/A001-dzn.fzn
+!data/fzn/or-tools/Mz1-noAbs-dualModel/A001-dzn.fzn
+!data/fzn/or-tools/Mz1-noAbs-dualModel-finalSearchAnnotation/A001-dzn.fzn
 !data/fzn/or-tools/Mz2-noAbs/A001-dzn.fzn
 !data/fzn/smt2/Mz1-noAbs/A001-dzn.fzn
 !data/fzn/smt2/Mz2-noAbs/A001-dzn.fzn
@@ -152,3 +152,7 @@ data/smt2/
 !data/smt2/z3/Mz2-noAbs/A001-dzn-fzn.smt2
 !data/smt2/optimathsat/Mz1-noAbs/A001-dzn-fzn.smt2
 !data/smt2/optimathsat/Mz2-noAbs/A001-dzn-fzn.smt2
+
+.DS_Store
+.ozn
+
