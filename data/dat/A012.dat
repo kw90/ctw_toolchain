@@ -1,0 +1,19 @@
+/* Cplex Data generated on 2017-12-15 */
+
+k = 2;
+
+b = 1;
+
+AtomicConstraints = {
+	 }; 
+
+SoftAtomicConstraints = {
+	 }; 
+
+DisjunctiveConstraints = {
+	 }; 
+
+DirectSuccessors = {
+	1,
+	 }; 
+

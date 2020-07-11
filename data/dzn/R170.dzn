@@ -1,0 +1,8 @@
+k = 3;
+b = 1;
+AtomicConstraints =  [|
+1, 3|];
+DisjunctiveConstraints =  [||];
+SoftAtomicConstraints =  [|
+2, 3|];
+DirectSuccessors =  [];
