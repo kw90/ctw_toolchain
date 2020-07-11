@@ -80,3 +80,11 @@ identical, but one more 3rd step is added, which removes the final optimization
 and output lines. The optimization and output is handled by the Python Wrapper
 found on [this GitHub
 repository](https://github.com/kw90/omt_python_timeout_wrapper).
+
+## Experimental Results
+
+All the model files that are under `models` were run by a multitude of solvers
+with the original or translated data files under `data`. The results of all our
+experiments can be found in the [excel
+table](results/ctw_benchmarking-solvers_result-summary.xlsx) in the `results`
+folder.
