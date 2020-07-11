@@ -49,7 +49,8 @@ folders that get used by the conversion scripts.
 
 ### Translating `dat` to `dzn`
 
-TBD.
+The notebook `TranslateDAT2DZN.ipynb` provides the script to translate `dat`
+data files to `dzn` data files.
 
 ### Translating `dzn` with `mzn` to flattened `fzn` for OR-Tools
 
