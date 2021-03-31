@@ -12,11 +12,16 @@ The folder `translation_toolchain` contains all Python scripts used to translate
 It also provides a reproducible Binder environment to run the translations and
 models on the benchmark data.
 
+See the [README](./translation_toolchain/README.md) for the
+`translation_toolchain` or
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kw90/ctw_toolchain/fix-binder).
+
 ## Minizinc Experiments
 
 The Powershell scripts that were used for solving cable tree instances with the
 Minizinc command line tool can be found in the `minizinc_experiments` folder
-along with instructions.
+along with instructions. Check out the
+[README](./minizinc_experiments/README.md) for further instructions.
 
 ## Experimental Results
 
